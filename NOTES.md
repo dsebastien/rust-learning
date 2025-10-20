@@ -37,8 +37,10 @@ let foo: &str = "Foo";
 ```
 
 ### Print a string
+Done using the `println` macro (NOT a function).
 
-Print a variable
+Print a variable:
+
 ```
 println!("{}", foo);
 ```
