@@ -31,9 +31,26 @@ fn main() {
 }
 ```
 
-### Declare a variable
+### Variables
+
+Declare a variable:
 ```
 let foo: &str = "Foo";
+let apples = 5; // This is a comment
+```
+
+Variables are immutable by default.
+
+Declare a mutable variable:
+
+```
+let mut change_me = 5;
+```
+
+Create an empty string:
+
+```
+let mut my_name: String = String::new();
 ```
 
 ### Print a string
