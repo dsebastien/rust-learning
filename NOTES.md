@@ -62,6 +62,15 @@ Print a variable:
 println!("{}", foo);
 ```
 
+Print a variable and the result of an expression:
+
+```
+let x = 5;
+let y = 10;
+
+println!("x = {x} and y + 2 = {}", y + 2);
+```
+
 ### Prelude
 A prelude is a collection of imports.
 The ´std::prelude` is the standard prelude, which is automatically available to ALL Rust programs.

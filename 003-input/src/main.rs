@@ -9,7 +9,12 @@ fn main() {
 
     io::stdin() // Get standard input handle. That function returns an instance of Stdin
         .read_line(&mut guess) // Read a line from standard input and append it to 'guess'. The passed reference must be mutable
-        .expect("Failed to read line"); // Handle potential errors
+        // read_line returns a Result type that indicates whether the operation was successful or not
+        // it's an enum (https://doc.rust-lang.org/book/ch06-00-enums.html) with two variants: Ok and Err
+        .expect("Failed to read line"); // The message to display if an error occurs
+        // if the Result is an Err variant, the expect method will cause the program to crash and display the provided message
+        // if it's an Ok variant, the expect method will return the value inside the Ok variant
+        // in Java this would be similar to throwing an exception
 
     println!("You guessed: {guess}");
 }
