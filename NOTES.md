@@ -70,3 +70,17 @@ Certain modules may provide their own preludes (e.g., `std::io::prelude`), but t
 
 Reference: https://doc.rust-lang.org/std/prelude/index.html
 
+### Imports
+To import a "module":
+
+```
+use std::io;
+...
+io::stdin().read_line(&mut guess);
+```
+
+Just like in Java, imports are not mandatory. It's possible to use functions etc in modules by prefixing those with the complete "path":
+
+```
+std::io::stdin().read_line(&mut guess);
+```
