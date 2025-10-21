@@ -22,6 +22,20 @@ Cargo.toml
 ### Configuration
 Configured in `Cargo.toml`
 
+### Dependencies
+Add a `[dependencies] section to `Cargo.toml`.
+
+Each dependency version is set like this:
+
+```
+<name> = "<version>"
+```
+
+Dependencies are installed using `cargo update`, which is also done when using `cargo build`.
+
+Where version may be `x.y.z` (semver). When installing dependencies, cargo will use the most recent compatible version and add a `Cargo.lock` file for build reproductibility.
+
+
 ## Rust
 
 ### Main function
@@ -93,3 +107,9 @@ Just like in Java, imports are not mandatory. It's possible to use functions etc
 ```
 std::io::stdin().read_line(&mut guess);
 ```
+
+### Random numbers
+
+Use the `rand` library.
+
+Generate a random number: `let secret_number = rand::thread_rng().gen_range(1..=100);`
